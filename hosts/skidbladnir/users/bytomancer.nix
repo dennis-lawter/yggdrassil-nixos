@@ -26,7 +26,7 @@
       vscodium
       vesktop
       git
-      gnome.nautilus
+      nautilus
       picom
       feh
       xwinwrap
@@ -47,7 +47,7 @@
       kitty
       pkg-config
       xinput_calibrator
-      gnome.gnome-font-viewer
+      gnome-font-viewer
       fio
       stow
       gscreenshot

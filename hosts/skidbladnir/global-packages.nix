@@ -5,7 +5,7 @@
     zsh
     udisks
     udiskie
-    gnome.gnome-disk-utility
+    gnome-disk-utility
     udevil
     gvfs
     rofi

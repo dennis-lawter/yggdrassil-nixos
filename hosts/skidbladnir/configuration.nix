@@ -3,7 +3,7 @@
 {
   imports =
     [ # Include the results of the hardware scan.
-      /etc/nixos/hardware-configuration.nix
+      ./hardware-configuration.nix
       ./global-packages.nix
       ./users/bytomancer.nix
     ];
@@ -89,5 +89,5 @@
   programs.zsh.enable = true;
   users.defaultUserShell = pkgs.zsh;
 
-  system.stateVersion = "24.05";
+  system.stateVersion = "25.05";
 }
