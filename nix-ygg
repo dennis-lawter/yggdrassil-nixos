@@ -1,0 +1,20 @@
+#!/usr/bin/env sh
+
+if [ "$EUID" -ne 0 ]; then
+  echo "Please run as root"
+  exit 1
+fi
+
+SCRIPT_DIR="$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)"
+FLAKE_PATH="$SCRIPT_DIR"
+
+UPGRADE=""
+if [ "$1" = "-u" ]; then
+  UPGRADE="--upgrade"
+  shift
+fi
+
+RAW_HOST="${1:-$(hostname)}"
+HOST="$(printf '%s' "$RAW_HOST" | tr '[:upper:]' '[:lower:]')"
+
+exec nixos-rebuild switch $UPGRADE --flake "${FLAKE_PATH}#${HOST}"
