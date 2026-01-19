@@ -64,6 +64,8 @@
       ripgrep
       dysk
       dust
+
+      easyeffects
     ];
   };
 }

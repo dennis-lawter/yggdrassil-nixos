@@ -20,6 +20,13 @@
           ./hosts/skidbladnir/configuration.nix
         ];
       };
+
+      hrotti = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+        modules = [
+          ./hosts/hrotti/configuration.nix
+        ];
+      };
     };
   };
 }
