@@ -12,7 +12,7 @@
       ../../profiles/de/locale.nix
       ../../profiles/de/i3wm+gdm.nix
 
-      ../../profiles/gaming.nix
+      ../../profiles/steam.nix
 
       ../../profiles/dev/docker.nix
 

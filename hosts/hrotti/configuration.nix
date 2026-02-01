@@ -12,7 +12,8 @@
       ../../profiles/de/locale.nix
       ../../profiles/de/gnome.nix
 
-      ../../profiles/gaming.nix
+      ../../profiles/steam.nix
+      ../../profiles/xiv.nix
 
       ../../profiles/hw/nvidia.nix
 
