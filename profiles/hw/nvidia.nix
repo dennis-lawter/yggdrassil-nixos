@@ -11,9 +11,9 @@
     open = false; # set true only if you explicitly want open kernel module
     nvidiaSettings = true;
   };
-
-  hardware.opengl = {
+  
+  hardware.graphics = {
     enable = true;
-    driSupport32Bit = true;
+    enable32Bit = true;
   };
 }

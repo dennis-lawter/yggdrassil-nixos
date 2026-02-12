@@ -1,14 +1,16 @@
 { pkgs, ... }:
 
 {
-  hardware.opengl.enable = true;
-  hardware.opengl.driSupport32Bit = true;
+  hardware.graphics = {
+    enable = true;
+    enable32Bit = true;
+  };
 
   environment.systemPackages = with pkgs; [
     xivlauncher
     input-remapper
-    polychromatic
-    openrazer-daemon
+    dotnet-runtime_8
+    wineWowPackages.stable
   ];
 
   programs.gamemode.enable = true;
