@@ -17,6 +17,8 @@
 
       ../../profiles/hw/nvidia.nix
 
+      ../../profiles/hw/audio.nix
+
       ../../users/bytomancer.nix
     ];
 
@@ -29,26 +31,9 @@
     via
   ];
 
-  hardware.bluetooth.enable = true;
-  hardware.bluetooth.powerOnBoot = true;
-  services.hardware.bolt.enable = true;
-  services.gvfs.enable = true;
-  services.udisks2.enable = true;
-  services.devmon.enable = true;
-  services.printing.enable = true;
-
-  hardware.pulseaudio.enable = false;
-  security.rtkit.enable = true;
-  services.pipewire = {
-    enable = true;
-    alsa.enable = true;
-    alsa.support32Bit = true;
-    pulse.enable = true;
-  };
+  nixpkgs.config.allowUnfree = true;
 
   programs.firefox.enable = true;
-
-  nixpkgs.config.allowUnfree = true;
 
   programs.zsh.enable = true;
   users.defaultUserShell = pkgs.zsh;
