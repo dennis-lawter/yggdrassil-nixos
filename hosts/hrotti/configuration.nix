@@ -9,15 +9,14 @@
       ../../profiles/bootloader.nix
       ../../profiles/global-packages.nix
 
+      ../../profiles/hw/nvidia.nix
+      ../../profiles/hw/audio.nix
+
       ../../profiles/de/locale.nix
       ../../profiles/de/gnome.nix
 
       ../../profiles/steam.nix
       ../../profiles/xiv.nix
-
-      ../../profiles/hw/nvidia.nix
-
-      ../../profiles/hw/audio.nix
 
       ../../users/bytomancer.nix
     ];
@@ -25,11 +24,6 @@
   networking.hostName = "Hrotti";
 
   environment.pathsToLink = [ "/libexec" ];
-
-  services.udev.packages = with pkgs; [
-    vial
-    via
-  ];
 
   nixpkgs.config.allowUnfree = true;
 
