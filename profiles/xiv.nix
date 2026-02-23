@@ -18,10 +18,6 @@
   };
 
   environment.systemPackages = with pkgs; [
-    #xivlauncher
     input-remapper
-    #dotnet-runtime_8
-    #wineWowPackages.stable
-    #winetricks
   ];
 }
