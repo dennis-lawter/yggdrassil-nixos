@@ -31,6 +31,15 @@
         ];
       };
 
+      # GPD Pocket 2
+      hringhorni = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+        modules = [
+          ./hosts/hringhorni/configuration.nix
+        ];
+      };
+
+      # Gaming PC
       hrotti = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         modules = [
