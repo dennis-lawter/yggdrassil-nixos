@@ -7,6 +7,7 @@
 
   outputs = { self, nixpkgs, ... }: {
     nixosConfigurations = {
+      # Compute server
       hvergelmir = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         modules = [
@@ -14,6 +15,15 @@
         ];
       };
 
+      # FW12
+      naglfar = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+        modules = [
+          ./hosts/naglfar/configuration.nix
+        ];
+      };
+
+      # FW13
       skidbladnir = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         modules = [
