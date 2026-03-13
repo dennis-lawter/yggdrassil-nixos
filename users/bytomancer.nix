@@ -66,6 +66,8 @@
       dust
 
       easyeffects
+
+      discord
     ];
   };
 }
