@@ -15,6 +15,14 @@
         ];
       };
 
+      # Proxy server
+      hofund = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+        modules = [
+          ./hosts/hofund/configuration.nix
+        ];
+      };
+
       # FW12
       naglfar = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
