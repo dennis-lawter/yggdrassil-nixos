@@ -9,6 +9,7 @@
       ../../profiles/bootloader.nix
       ../../profiles/global-packages.nix
 
+      ../../profiles/hw/common.nix
       ../../profiles/hw/audio.nix
 
       ../../profiles/de/locale.nix

@@ -15,11 +15,20 @@
         i3status
         i3lock
         i3blocks
+
+        kdePackages.qtsvg
+        kdePackages.kio
+        kdePackages.kio-fuse
+        kdePackages.kio-extras
+        kdePackages.dolphin
+
+        # libva
+        kdePackages.spectacle
       ];
     };
 
-    displayManager.gdm.enable = true;
-    desktopManager.gnome.enable = true;
+    displayManager.lightdm.enable = true;
+    displayManager.lightdm.greeters.slick.enable = true;
   };
 
   environment.pathsToLink = [ "/libexec" ];

@@ -8,6 +8,15 @@
   programs.gamemode.enable = true;
 
   services.flatpak.enable = true;
+  
+  xdg.portal = {
+    enable = true;
+    extraPortals = with pkgs; [
+      kdePackages.xdg-desktop-portal-kde
+    ];
+  };
+  xdg.portal.config.common.default = "*";
+
 
   i18n = {
     defaultLocale = "en_US.UTF-8";
