@@ -9,7 +9,7 @@
   users.users.bytomancer = {
     isNormalUser = true;
     description = "Bytomancer";
-    extraGroups = [ "networkmanager" "wheel" "docker" ];
+    extraGroups = [ "networkmanager" "wheel" "docker" "storage" ];
     packages = with pkgs; [
       fastfetch
       alacritty
@@ -18,12 +18,10 @@
       vscodium
       vesktop
       git
-      nautilus
       picom
       feh
       xwinwrap
       mpv
-      obsidian
       arandr
       pavucontrol
       fastfetch
@@ -42,8 +40,6 @@
       gnome-font-viewer
       fio
       stow
-      gscreenshot
-      via
       cmus
       yt-dlp
       pipe-viewer
