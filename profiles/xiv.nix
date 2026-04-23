@@ -20,4 +20,12 @@
   environment.systemPackages = with pkgs; [
     input-remapper
   ];
+
+  networking = {
+    firewall = {
+      enable = true;
+      allowedTCPPorts = [ 10501 ];
+      allowedUDPPorts = [ 10501 ];
+    };
+  };
 }
